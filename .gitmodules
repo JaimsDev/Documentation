@@ -1,3 +1,6 @@
 [submodule "jdautils"]
 	path = jdautils
 	url = https://github.com/jaimss/jdautils
+[submodule "mcutils"]
+	path = mcutils
+	url = https://github.com/Jaimss/mcutils
