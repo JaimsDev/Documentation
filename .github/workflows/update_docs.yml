@@ -1,0 +1,22 @@
+name: Update Documentation for Projects
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+
+jobs:
+  pulldocs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pull latest docs & latest code from repo
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /var/www/Documentation
+            echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git fetch 2> /dev/null
+            echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git pull 2> /dev/null
+            echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git submodule update --remote jdautils 2> /dev/null
+            echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git submodule update --remote mcutils 2> /dev/null
