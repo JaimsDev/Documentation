@@ -14,9 +14,11 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 69
           script: |
             cd /var/www/Documentation
             echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git fetch 2> /dev/null
             echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git pull 2> /dev/null
-            echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git submodule update --remote jdautils 2> /dev/null
-            echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git submodule update --remote mcutils 2> /dev/null
+            echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git submodule update --init --remote jdautils 2> /dev/null
+            echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git submodule update --init --remote mcutils 2> /dev/null
+            echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git submodule update --init --remote jcore 2> /dev/null
