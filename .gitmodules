@@ -4,3 +4,6 @@
 [submodule "mcutils"]
 	path = mcutils
 	url = https://github.com/Jaimss/mcutils
+[submodule "jcore"]
+	path = jcore
+	url = git@github.com:Jaimss/jcore.git
