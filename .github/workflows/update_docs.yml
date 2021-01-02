@@ -19,6 +19,6 @@ jobs:
             cd /var/www/Documentation
             echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git fetch 2> /dev/null
             echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git pull 2> /dev/null
-            echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git submodule update --init --remote jdautils 2> /dev/null
+            echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git submodule update --init --remote kda 2> /dev/null
             echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git submodule update --init --remote mcutils 2> /dev/null
             echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git submodule update --init --remote jcore 2> /dev/null

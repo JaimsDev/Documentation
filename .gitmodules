@@ -1,9 +1,9 @@
-[submodule "jdautils"]
-	path = jdautils
-	url = https://github.com/jaimss/jdautils
 [submodule "mcutils"]
 	path = mcutils
-	url = https://github.com/Jaimss/mcutils
+	url = git@github.com:Jaimss/mcutils.git
 [submodule "jcore"]
 	path = jcore
 	url = git@github.com:Jaimss/jcore.git
+[submodule "kda"]
+	path = kda
+	url = git@github.com:Jaimss/kda.git
