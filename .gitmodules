@@ -7,3 +7,6 @@
 [submodule "kda"]
 	path = kda
 	url = git@github.com:Jaimss/kda.git
+[submodule "moducore"]
+	path = moducore
+	url = git@github.com:Jaimss/moducore.git

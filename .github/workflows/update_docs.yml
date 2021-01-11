@@ -21,4 +21,4 @@ jobs:
             echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git pull 2> /dev/null
             echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git submodule update --init --remote kda 2> /dev/null
             echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git submodule update --init --remote mcutils 2> /dev/null
-            echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git submodule update --init --remote jcore 2> /dev/null
+            echo ${{ secrets.SSH_SUDO_PASS }} | sudo -S git submodule update --init --remote moducore 2> /dev/null
