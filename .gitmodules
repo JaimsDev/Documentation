@@ -10,3 +10,6 @@
 [submodule "moducore"]
 	path = moducore
 	url = git@github.com:Jaimss/moducore.git
+[submodule "hololib"]
+	path = hololib
+	url = git@github.com:Jaimss/hololib.git
